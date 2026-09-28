@@ -13,13 +13,13 @@ export default function ProjectSection() {
       title: "GoodPhase Thrift",
       category: "Web & Social Media",
       desc: "Pengembangan platform & strategi digital buat brand thrift pakaian.",
-      link: "#",
+      link: "https://www.instagram.com/goodphase_?utm_source=ig_web_button_share_sheet&stkn=ZDNlZDc0MzIxNw==",
     },
     {
       title: "Zenko Kissaten",
       category: "Web Development",
       desc: "Pengembangan website kafe lengkap dengan integrasi Google Maps iframe dan deployment GitHub.",
-      link: "#",
+      link: "https://zenkokissaten.biznityhub.com/",
     },
   ];
 
