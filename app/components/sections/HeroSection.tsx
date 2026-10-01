@@ -24,7 +24,7 @@ export default function HeroSection() {
           Aka. Ray
         </p>
         <p className="text-[16px] leading-[1.38] text-[#1a1818] mb-8 max-w-[540px]">
-          Halo! Gw seorang mahasiswa yang aktif di dunia web development, penggiat organisasi kampus, dan hobi ngerjain berbagai project kreatif mulai dari apparel brand, data analytics, sampe hobi musik.
+          Halo! Saya seorang mahasiswa yang aktif di dunia web development, penggiat organisasi kampus, dan hobi ngerjain berbagai project kreatif mulai dari apparel brand, data analytics, sampe hobi musik.
         </p>
         <a 
           href="#projects" 
