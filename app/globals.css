@@ -1,88 +1,26 @@
 @import "tailwindcss";
-@theme {
-  /* Colors */
-  --color-midnight-wine: #421d24;
-  --color-royal-violet: #714cb6;
-  --color-lilac-mist: #d4c7ff;
-  --color-deep-lagoon: #0c4243;
-  --color-warm-parchment: #f2f0eb;
-  --color-soft-mist: #e3e3e2;
-  --color-ink-charcoal: #292827;
-  --color-stone-gray: #666666;
-  --color-paper-white: #ffffff;
-
-  /* Typography */
-  --font-super-sans-vf: 'Super Sans VF', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-
-  /* Typography — Scale */
-  --text-caption: 12px;
-  --leading-caption: 1.5;
-  --text-body-sm: 14px;
-  --leading-body-sm: 1.5;
-  --text-body: 16px;
-  --leading-body: 1.2;
-  --text-label-bold: 19px;
-  --leading-label-bold: 1.5;
-  --text-subheading: 26px;
-  --leading-subheading: 1.3;
-  --text-heading-sm: 28px;
-  --leading-heading-sm: 1.14;
-  --tracking-heading-sm: -0.62px;
-  --text-heading-lg: 49px;
-  --leading-heading-lg: 1.2;
-  --tracking-heading-lg: -1.32px;
-  --text-display: 64px;
-  --leading-display: 0.96;
-  --tracking-display: -1.8px;
-
-  /* Spacing */
-  --spacing-4: 4px;
-  --spacing-8: 8px;
-  --spacing-12: 12px;
-  --spacing-16: 16px;
-  --spacing-20: 20px;
-  --spacing-24: 24px;
-  --spacing-28: 28px;
-  --spacing-32: 32px;
-  --spacing-36: 36px;
-  --spacing-40: 40px;
-  --spacing-48: 48px;
-  --spacing-64: 64px;
-  --spacing-80: 80px;
-  --spacing-96: 96px;
-
-  /* Border Radius */
-  --radius-lg: 8px;
-  --radius-xl: 12px;
-  --radius-2xl: 16px;
-  --radius-3xl: 24px;
-  --radius-full: 999px;
-
-  /* Shadows */
-  --shadow-subtle: rgb(113, 76, 182) 0px 0px 0px 1px inset;
-}
-@import "tailwindcss";
 
 @theme {
-  /* Blok ini khusus untuk variabel tema saja (kosongkan atau isi variabel jika ada) */
+  --color-earth-dark: #12100E;
+  --color-earth-mid: #261C14;
+  --color-earth-warm: #451A03;
+  --color-brand-amber: #D97706;
 }
 
-/* =========================================
-   Pindahkan kode interaktif ini KE LUAR @theme (di paling bawah)
-   ========================================= */
-.interactive-photo:hover .photo-caption {
-  transform: translateY(0);
-  @keyframes lanyardSwing {
-  0% { transform: rotate(0deg); }
-  20% { transform: rotate(7deg); }
-  40% { transform: rotate(-6deg); }
-  60% { transform: rotate(4deg); }
-  80% { transform: rotate(-2deg); }
-  100% { transform: rotate(0deg); }
+body {
+  background: linear-gradient(to bottom right, #12100E, #261C14, #451A03);
+  background-attachment: fixed;
+  color: #ffffff !important;
+  min-height: 100vh;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
 }
 
-.animate-lanyard-swing {
-  animation: lanyardSwing 0.8s ease-in-out;
-  transform-origin: top center; /* Kunci utamanya: titik tumpu di atas (pengait) */
+/* Paksa semua teks di seluruh web jadi putih bersih */
+h1, h2, h3, h4, h5, h6, p, span, a, li, button, label {
+  color: #ffffff !important;
 }
+
+/* Kecuali kalau lagi di-hover khusus, atau tombol tertentu (opsional) */
+a:hover {
+  color: #FBBF24 !important; /* Warna amber pas di-hover biar tetap estetik */
 }

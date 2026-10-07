@@ -6,7 +6,7 @@ export default function HeroSection() {
       
       {/* Kolom Kiri: Foto Galeri Clean (Hover jadi Grayscale) */}
       <div className="w-full md:w-1/2 flex justify-center">
-        <div className="relative overflow-hidden border border-[#d6d6d6] group cursor-pointer">
+       <div className="relative overflow-hidden group cursor-pointer">
           <img
             src="/hero-img.png"
             alt="Foto Al Bae"
