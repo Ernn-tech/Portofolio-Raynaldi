@@ -142,8 +142,8 @@ export default function ProjectSection() {
           </h3>
           <div className="flex flex-col gap-6">
             {documents.map((doc, index) => (
-              <div key={index} className="p-6 border border-[#292524] rounded-xl flex justify-between items-center hover:border-[#D97706] hover:bg-[#292524]/60 transition-all duration-300">
-                <div>
+              <div key={index} className="p-6 border border-[#292524] rounded-xl flex flex-col md:flex-row justify-between items-start md:items-center hover:border-[#D97706] hover:bg-[#292524]/60 transition-all duration-300">
+                <div className="w-full md:w-auto pr-0 md:pr-4">
                   <h4 className="text-[16px] font-semibold text-white">{doc.title}</h4>
                   <p className="text-[14px] text-white mt-1.5">{doc.desc}</p>
                   <span className="inline-block mt-3 text-[11px] text-white font-mono uppercase tracking-wide">{doc.fileSize}</span>
@@ -151,7 +151,7 @@ export default function ProjectSection() {
                 <a 
                   href={doc.downloadUrl}
                   download
-                  className="px-6 py-3 bg-[#D97706] text-white text-[12px] font-bold uppercase tracking-wider rounded-lg hover:bg-[#B45309] transition-colors whitespace-nowrap ml-6 shadow-sm"
+                  className="mt-4 md:mt-0 w-full md:w-auto text-center px-6 py-3 bg-[#D97706] text-white text-[12px] font-bold uppercase tracking-wider rounded-lg hover:bg-[#B45309] transition-colors whitespace-nowrap shadow-sm"
                 >
                   Download
                 </a>
@@ -173,9 +173,8 @@ export default function ProjectSection() {
             </p>
           </div>
           
-          {/* Tombol dengan background putih dan teks warna gelap/hitam */}
-<a 
-            href="https://nama-blog-lu.blogspot.com" 
+          <a 
+            href="https://putraraynaldi.blogspot.com" 
             target="_blank"
             rel="noopener noreferrer"
             className="w-full py-5 bg-white text-[#451A03]! text-center text-[14px] font-bold uppercase tracking-[0.2em] rounded-xl hover:bg-[#F3F4F6] transition-colors shadow-lg"
