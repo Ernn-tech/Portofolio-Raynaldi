@@ -9,10 +9,10 @@ export default function ProjectSection() {
       link: "https://lumilab.biznityhub.com",
     },
     {
-      title: "GoodPhase Thrift",
+      title: "Web BEM Politeknik LP3I Jakarta Selatan",
       category: "Web & Social Media",
-      desc: "Pengembangan platform & strategi digital buat brand thrift pakaian.",
-      link: "#",
+      desc: "Pusat Informasi & Layanan Terpadu Mahasiswa.",
+      link: "https://www.bemlp3ijaksel.com/",
     },
     {
       title: "Zenko Kissaten",
@@ -39,6 +39,9 @@ export default function ProjectSection() {
       image: "/img/ASSET-3.jpg",
     },
   ];
+
+  // Duplikasi biar looping-nya nyambung mulus tanpa jeda
+  const infiniteDesigns = [...designs, ...designs, ...designs];
 
   const documents = [
     {
@@ -107,27 +110,38 @@ export default function ProjectSection() {
         </div>
       </div>
 
-      {/* 2. Grid Hasil Desain & Aset Visual */}
+      {/* 2. Autoplay Infinite Carousel Desain (Pure CSS Smooth) */}
       <div className="mb-24">
-        <h3 className="text-[18px] font-semibold uppercase tracking-[0.15em] text-white mb-10 pb-3 border-b border-[#D97706]/30">
-          Visual Design & Branding
-        </h3>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {designs.map((design, index) => (
-            <div key={index} className="border border-[#D97706]/20 rounded-2xl overflow-hidden bg-[#1C1714]/90 group relative transition-all duration-300 hover:shadow-2xl hover:border-[#D97706]">
-              <div className="relative h-[480px] p-5 flex items-center justify-center overflow-hidden">
-                <img 
-                  src={design.image} 
-                  alt={design.title}
-                  className="max-h-full max-w-full object-contain transition-transform duration-500 group-hover:scale-105"
-                  onError={(e) => { (e.target as HTMLElement).style.display = 'none'; }}
-                />
-                <div className="absolute top-6 left-6 bg-[#D97706] text-white text-[11px] tracking-wider uppercase px-3.5 py-1.5 rounded-full font-bold shadow-md">
-                  {design.category}
+        <div className="flex justify-between items-center mb-10 pb-3 border-b border-[#D97706]/30">
+          <h3 className="text-[18px] font-semibold uppercase tracking-[0.15em] text-white">
+            Visual Design & Branding
+          </h3>
+          <span className="text-[12px] text-[#D97706] tracking-wider uppercase font-mono font-medium">
+            
+          </span>
+        </div>
+
+        <div className="overflow-hidden py-2">
+          <div className="animate-marquee gap-8">
+            {infiniteDesigns.map((design, index) => (
+              <div 
+                key={index} 
+                className="w-[300px] md:w-[360px] border border-[#D97706]/20 rounded-2xl overflow-hidden bg-[#1C1714]/90 group relative transition-all duration-300 hover:shadow-2xl hover:border-[#D97706] flex-shrink-0"
+              >
+                <div className="relative h-[480px] p-5 flex items-center justify-center overflow-hidden">
+                  <img 
+                    src={design.image} 
+                    alt={design.title}
+                    className="max-h-full max-w-full object-contain transition-transform duration-500 group-hover:scale-105"
+                    onError={(e) => { (e.target as HTMLElement).style.display = 'none'; }}
+                  />
+                  <div className="absolute top-6 left-6 bg-[#D97706] text-white text-[11px] tracking-wider uppercase px-3.5 py-1.5 rounded-full font-bold shadow-md">
+                    {design.category}
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
 
@@ -174,7 +188,7 @@ export default function ProjectSection() {
           </div>
           
           <a 
-            href="https://putraraynaldi.blogspot.com" 
+            href="https://putraraynaldi .blogspot.com" 
             target="_blank"
             rel="noopener noreferrer"
             className="w-full py-5 bg-white text-[#451A03]! text-center text-[14px] font-bold uppercase tracking-[0.2em] rounded-xl hover:bg-[#F3F4F6] transition-colors shadow-lg"

@@ -1,21 +1,34 @@
 "use client";
 
+import { motion } from "framer-motion";
+
 export default function HeroSection() {
   return (
     <section className="max-w-[1200px] mx-auto px-6 py-20 flex flex-col md:flex-row items-center justify-between min-h-[80vh]">
-      {/* Kolom Kiri: Foto Galeri Clean */}
-      <div className="w-full md:w-1/2 flex justify-center mb-10 md:mb-0">
+      
+      {/* Kolom Kiri: Foto Galeri dengan Animasi */}
+      <motion.div 
+        initial={{ opacity: 0, x: -30 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        className="w-full md:w-1/2 flex justify-center mb-10 md:mb-0"
+      >
         <div className="relative overflow-hidden group cursor-pointer">
           <img 
-            src="/hero-img.png" 
+            src="/foto gue.png" 
             alt="Foto Al Bae"
             className="w-full max-w-[380px] h-auto object-cover transition-all duration-700 ease-in-out"
           />
         </div>
-      </div>
+      </motion.div>
 
-      {/* Kolom Kanan: Teks & Bio */}
-      <div className="w-full md:w-1/2 flex flex-col items-start">
+      {/* Kolom Kanan: Teks & Bio dengan Animasi */}
+      <motion.div 
+        initial={{ opacity: 0, x: 30 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+        className="w-full md:w-1/2 flex flex-col items-start"
+      >
         <h1 className="text-[40px] md:text-[50px] leading-tight tracking-[0.015em] font-bold text-white mb-3">
           Putra Raynaldi Gultom
         </h1>
@@ -31,7 +44,8 @@ export default function HeroSection() {
         >
           Lihat Proyek &rarr;
         </a>
-      </div>
+      </motion.div>
+
     </section>
   );
 }

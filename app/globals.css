@@ -152,4 +152,41 @@ a:hover {
   html {
     @apply font-sans;
   }
+  @import "tailwindcss";
+
+@theme {
+  --color-earth-dark: #12100E;
+  --color-earth-mid: #261C14;
+  --color-earth-warm: #451A03;
+  --color-brand-amber: #D97706;
+}
+
+body {
+  background: linear-gradient(to bottom right, #12100E, #261C14, #451A03);
+  background-attachment: fixed;
+  color: #ffffff;
+  min-height: 100vh;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+/* Custom Infinite Marquee yang super smooth & anti patah-patah */
+@keyframes infiniteScroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-33.33%);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: infiniteScroll 25s linear infinite;
+}
+
+/* Otomatis pause pas kursor ditaruh di atas carousel */
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
 }
