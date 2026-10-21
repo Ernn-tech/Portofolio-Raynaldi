@@ -22,10 +22,10 @@ export default function ProjectSection() {
       link: "https://lumilab.biznityhub.com",
     },
     {
-      title: "GoodPhase Thrift",
+      title: "Web BEM Politeknik LP3I Jakarta Selatan",
       category: "Web & Social Media",
-      desc: "Pengembangan platform & strategi digital buat brand thrift pakaian.",
-      link: "#",
+      desc: "Website Informasi seputar BEM Politeknik LP3I Jakarta Selatan",
+      link: "https://www.bemlp3ijaksel.com/",
     },
     {
       title: "Zenko Kissaten",
