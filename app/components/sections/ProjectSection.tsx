@@ -1,6 +1,19 @@
 "use client";
 
+import { useState, useRef } from "react";
+
 export default function ProjectSection() {
+  // State & Ref buat ngontrol Mute/Unmute Video
+  const [isMuted, setIsMuted] = useState(true);
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  const toggleMute = () => {
+    if (videoRef.current) {
+      videoRef.current.muted = !isMuted;
+      setIsMuted(!isMuted);
+    }
+  };
+
   const projects = [
     {
       title: "Lumilab Apparel",
@@ -9,10 +22,10 @@ export default function ProjectSection() {
       link: "https://lumilab.biznityhub.com",
     },
     {
-      title: "Web BEM Politeknik LP3I Jakarta Selatan",
+      title: "GoodPhase Thrift",
       category: "Web & Social Media",
-      desc: "Pusat Informasi & Layanan Terpadu Mahasiswa.",
-      link: "https://www.bemlp3ijaksel.com/",
+      desc: "Pengembangan platform & strategi digital buat brand thrift pakaian.",
+      link: "#",
     },
     {
       title: "Zenko Kissaten",
@@ -24,6 +37,11 @@ export default function ProjectSection() {
 
   const designs = [
     {
+      title: "Retro Lime Mascot Illustration",
+      category: "Character Design",
+      image: "/video/haram1.gif",
+    },
+    {
       title: "Desain Poster / Banner Kreatif",
       category: "Graphic Design",
       image: "/img/ASSET-1.png",
@@ -33,14 +51,35 @@ export default function ProjectSection() {
       category: "Interface Design",
       image: "/img/ASSET-2.png",
     },
-    {
-      title: "Social Media Feed & Assets",
-      category: "Branding",
+       {
+      title: "Streetwear Shoes Discount Campaign",
+      category: "SOCIAL MEDIA FEED DESIGN",
       image: "/img/ASSET-3.jpg",
+    },
+       {
+      title: "Explore Indonesia - Travel Agency Poster",
+      category: "DIGITAL AVERTISING",
+      image: "/img/ASSET-4.png",
     },
   ];
 
-  // Duplikasi biar looping-nya nyambung mulus tanpa jeda
+  const videoProjects = [
+    {
+      title: "Motion UI Interaction Demo",
+      category: "Video Motion",
+      src: "/video/ini-perta.gif",
+      isGif: true,
+      desc: "Demonstrasi animasi komponen interaktif.",
+    },
+    {
+      title: "Showcase Reel Video",
+      category: "MP4 Video",
+      src: "/video/perta oi.mp4",
+      isGif: false,
+      desc: "Showcase video projek dengan kontrol audio Mute/Unmute.",
+    },
+  ];
+
   const infiniteDesigns = [...designs, ...designs, ...designs];
 
   const documents = [
@@ -69,11 +108,11 @@ export default function ProjectSection() {
           <div>
             <p className="text-[12px] tracking-[0.15em] text-[#D97706] uppercase mb-3 font-semibold">SELECTED WORKS & ARCHIVE</p>
             <h2 className="text-[48px] md:text-[60px] font-bold tracking-tight text-white leading-none">
-              Proyek, Desain, <br/>Dokumen & Blog
+              Proyek, Desain, <br/>Video & Dokumen
             </h2>
           </div>
           <p className="text-[16px] text-white max-w-[380px] mt-6 md:mt-0 leading-relaxed">
-            Kumpulan project web dev, karya desain visual, arsip dokumen organisasi BEM, riset akademik, dan catatan tulisan di Blogspot.
+            Kumpulan project web dev, karya desain visual, preview video/GIF, arsip dokumen organisasi BEM, riset, dan catatan blog.
           </p>
         </div>
       </div>
@@ -110,14 +149,14 @@ export default function ProjectSection() {
         </div>
       </div>
 
-      {/* 2. Autoplay Infinite Carousel Desain (Pure CSS Smooth) */}
+      {/* 2. Autoplay Infinite Carousel Desain */}
       <div className="mb-24">
         <div className="flex justify-between items-center mb-10 pb-3 border-b border-[#D97706]/30">
           <h3 className="text-[18px] font-semibold uppercase tracking-[0.15em] text-white">
             Visual Design & Branding
           </h3>
           <span className="text-[12px] text-[#D97706] tracking-wider uppercase font-mono font-medium">
-            
+            Arahkan kursor untuk pause
           </span>
         </div>
 
@@ -145,7 +184,60 @@ export default function ProjectSection() {
         </div>
       </div>
 
-      {/* 3. Dokumen & Blogspot */}
+      {/* 3. Motion Graphics & Video Projects */}
+      <div className="mb-24">
+        <h3 className="text-[18px] font-semibold uppercase tracking-[0.15em] text-white mb-10 pb-3 border-b border-[#D97706]/30">
+          Motion Graphics & Video Projects
+        </h3>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {videoProjects.map((vid, index) => (
+            <div key={index} className="border border-[#D97706]/20 rounded-2xl p-8 bg-[#1C1714]/90 group flex flex-col justify-between transition-all duration-300 hover:shadow-2xl hover:border-[#D97706]">
+              <div>
+                <div className="mb-5">
+                  <span className="inline-block bg-[#D97706] text-white text-[11px] tracking-wider uppercase px-3 py-1.5 font-mono rounded-full font-bold">
+                    {vid.category}
+                  </span>
+                </div>
+                <h4 className="text-[22px] font-bold text-white mb-3">{vid.title}</h4>
+                <p className="text-[15px] text-white leading-relaxed mb-6">{vid.desc}</p>
+              </div>
+
+              {/* Media Container (Video Player / GIF) */}
+              <div className="relative rounded-xl overflow-hidden border border-[#292524] bg-black/40 aspect-video flex items-center justify-center">
+                {vid.isGif ? (
+                  <img 
+                    src={vid.src} 
+                    alt={vid.title} 
+                    className="w-full h-full object-cover"
+                  />
+                ) : (
+                  <>
+                    <video 
+                      ref={videoRef}
+                      src={vid.src} 
+                      autoPlay 
+                      loop 
+                      muted={isMuted}
+                      playsInline 
+                      className="w-full h-full object-cover"
+                    />
+                    
+                    {/* Tombol ON / OFF Suara */}
+                    <button
+                      onClick={toggleMute}
+                      className="absolute bottom-4 right-4 bg-black/60 hover:bg-[#D97706] text-white text-[12px] font-mono px-3 py-1.5 rounded-lg border border-white/20 backdrop-blur-md transition-all flex items-center gap-2"
+                    >
+                      {isMuted ? "🔇 SOUND OFF" : "🔊 SOUND ON"}
+                    </button>
+                  </>
+                )}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* 4. Dokumen & Blogspot */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         
         {/* Dokumen / Arsip */}
@@ -188,7 +280,7 @@ export default function ProjectSection() {
           </div>
           
           <a 
-            href="https://putraraynaldi .blogspot.com" 
+            href="https://putraraynaldi.blogspot.com" 
             target="_blank"
             rel="noopener noreferrer"
             className="w-full py-5 bg-white text-[#451A03]! text-center text-[14px] font-bold uppercase tracking-[0.2em] rounded-xl hover:bg-[#F3F4F6] transition-colors shadow-lg"
