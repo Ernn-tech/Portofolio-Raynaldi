@@ -280,7 +280,7 @@ export default function ProjectSection() {
           </div>
           
           <a 
-            href="https://nama-blog-lu.blogspot.com" 
+            href="https://putraraynaldi.blogspot.com" 
             target="_blank"
             rel="noopener noreferrer"
             className="w-full py-4 bg-[#d7ff68] text-[#10110f] text-center font-mono text-[11px] font-bold uppercase tracking-[0.15em] rounded hover:bg-[#c2ef4f] transition-colors"
