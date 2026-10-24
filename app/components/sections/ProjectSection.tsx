@@ -24,7 +24,7 @@ export default function ProjectSection() {
       title: "Web BEM LP3I Jaksel",
       category: "Organization / Portal",
       desc: "Pengembangan portal resmi Badan Eksekutif Mahasiswa Politeknik LP3I Jakarta Kampus Pasar Minggu untuk informasi kegiatan & aspirasi.",
-      link: "bemlp3ijaksel.com",
+      link: "https://bemlp3ijaksel.com/",
     },
     {
       title: "Zenko Kissaten",
