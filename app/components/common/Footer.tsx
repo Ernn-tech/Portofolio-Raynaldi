@@ -16,7 +16,7 @@ export default function Footer() {
 
         <div className="flex items-center gap-6 flex-wrap">
           <a 
-            href="https://mail.google.com/mail/u/0/#inbox/FMfcgzQhWnqrPXGQnQDcczXgrtRlTRQX?compose=new" 
+            href="https://mail.google.com/mail/u/0/#inbox?compose=new" 
             className="text-[14px] font-semibold text-[#FBBF24] hover:text-white uppercase tracking-wider transition-colors"
           >
             Email &rarr;
@@ -36,6 +36,14 @@ export default function Footer() {
             className="text-[14px] font-semibold text-[#FBBF24] hover:text-white uppercase tracking-wider transition-colors"
           >
             Blogspot &rarr;
+          </a>
+          <a 
+            href="https://www.linkedin.com/in/putraraynaldigultom" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="text-[14px] font-semibold text-[#FBBF24] hover:text-white uppercase tracking-wider transition-colors"
+          >
+            Linkedin &rarr;
           </a>
         </div>
 
