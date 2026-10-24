@@ -3,8 +3,7 @@
 export default function DarkFeaturesSection() {
   const socialLinks = [
     { name: "EMAIL", href: "https://mail.google.com/mail/u/0/#inbox?compose=new" },
-    { name: "INSTAGRAM", href: "https://www.instagram.com/kchrayy/" },
-    { name: "BLOGSPOT", href: "https://putraraynaldi.blogspot.com" },
+    { name: "INSTAGRAM", href: "https://www.instagram.com/kchrayy/?hl=en" },
     { name: "LINKEDIN", href: "https://www.linkedin.com/in/putraraynaldigultom" },
   ];
 

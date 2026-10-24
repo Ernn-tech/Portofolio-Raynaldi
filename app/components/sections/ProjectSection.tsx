@@ -24,13 +24,13 @@ export default function ProjectSection() {
       title: "Web BEM LP3I Jaksel",
       category: "Organization / Portal",
       desc: "Pengembangan portal resmi Badan Eksekutif Mahasiswa Politeknik LP3I Jakarta Kampus Pasar Minggu untuk informasi kegiatan & aspirasi.",
-      link: "#",
+      link: "bemlp3ijaksel.com",
     },
     {
       title: "Zenko Kissaten",
       category: "Web Development",
       desc: "Pengembangan website kafe konsep Showa retro lengkap dengan integrasi Google Maps iframe dan deployment GitHub.",
-      link: "#",
+      link: "https://zenkokissaten.biznityhub.com/",
     },
   ];
 
@@ -157,7 +157,7 @@ export default function ProjectSection() {
             02 // Visual Design & Branding
           </h3>
           <span className="font-mono text-[10px] text-[#8c8e84] tracking-wider uppercase">
-            Arahkan kursor untuk pause
+            Arahkan kursor/tekan pada design untuk pause
           </span>
         </div>
 
