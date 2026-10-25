@@ -95,16 +95,16 @@ export default function ProjectSection() {
 <div className="relative rounded-md p-10 mb-20 overflow-hidden bg-[#171815] border border-[#30312c]">
   
   {/* Layer Gradient Bolak-Balik Kanan Kiri (Warna Ditingkatkan) */}
-  <div className="absolute inset-0 opacity-80 pointer-events-none bg-gradient-to-r from-[#d7ff68]/35 via-[#171815] to-[#d7ff68]/35 animate-ambient-slow" />
+  <div className="absolute inset-0 opacity-80 pointer-events-none bg-gradient-to-r from-[#ccff00]/35 via-[#171815] to-[#ccff00]/35 animate-ambient-slow" />
 
   {/* Glow Orb Kiri-Kanan Biar Makin Berasa Fluid-nya */}
-  <div className="absolute -top-12 -left-12 w-48 h-48 bg-[#d7ff68]/20 rounded-full blur-2xl pointer-events-none animate-pulse" />
-  <div className="absolute -bottom-12 -right-12 w-48 h-48 bg-[#d7ff68]/20 rounded-full blur-2xl pointer-events-none animate-pulse" />
+  <div className="absolute -top-12 -left-12 w-48 h-48 bg-[#ccff00]/20 rounded-full blur-2xl pointer-events-none animate-pulse" />
+  <div className="absolute -bottom-12 -right-12 w-48 h-48 bg-[#ccff00]/20 rounded-full blur-2xl pointer-events-none animate-pulse" />
 
   <div className="relative z-10 flex flex-col md:flex-row justify-between items-start md:items-end gap-6">
     <div>
-      <p className="font-mono text-[10px] tracking-[0.1em] text-[#d7ff68] uppercase mb-3 font-semibold flex items-center gap-2">
-        <span className="w-1.5 h-1.5 rounded-full bg-[#d7ff68] animate-ping" />
+      <p className="font-mono text-[10px] tracking-[0.1em] text-[#ccff00] uppercase mb-3 font-semibold flex items-center gap-2">
+        <span className="w-1.5 h-1.5 rounded-full bg-[#ccff00] animate-ping" />
         SELECTED WORKS & ARCHIVE
       </p>
       <h2 className="text-[42px] md:text-[58px] font-extrabold tracking-tight text-[#f1f0e9] leading-none">
@@ -120,15 +120,15 @@ export default function ProjectSection() {
 
       {/* 1. Grid Portofolio Web / Apps */}
       <div className="mb-24">
-        <h3 className="font-mono text-[11px] font-semibold uppercase tracking-[0.15em] text-[#d7ff68] mb-8 pb-3 border-b border-[#30312c]">
+        <h3 className="font-mono text-[11px] font-semibold uppercase tracking-[0.15em] text-[#ccff00] mb-8 pb-3 border-b border-[#30312c]">
           01 // Web Development Projects
         </h3>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {projects.map((project, index) => (
-            <div key={index} className="border border-[#30312c] rounded-md p-8 bg-[#171815] group flex flex-col justify-between transition-all duration-300 hover:border-[#d7ff68]">
+            <div key={index} className="border border-[#30312c] rounded-md p-8 bg-[#171815] group flex flex-col justify-between transition-all duration-300 hover:border-[#ccff00]">
               <div>
                 <div className="mb-5">
-                  <span className="inline-block bg-[#20211d] text-[#d7ff68] border border-[#30312c] text-[10px] font-mono tracking-wider uppercase px-3 py-1 rounded">
+                  <span className="inline-block bg-[#20211d] text-[#ccff00] border border-[#30312c] text-[10px] font-mono tracking-wider uppercase px-3 py-1 rounded">
                     {project.category}
                   </span>
                 </div>
@@ -140,7 +140,7 @@ export default function ProjectSection() {
                   href={project.link} 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="font-mono text-[11px] font-bold text-[#d7ff68] hover:underline uppercase tracking-wider transition-colors inline-flex items-center gap-2"
+                  className="font-mono text-[11px] font-bold text-[#ccff00] hover:underline uppercase tracking-wider transition-colors inline-flex items-center gap-2"
                 >
                   Kunjungi Project <span>&rarr;</span>
                 </a>
@@ -153,7 +153,7 @@ export default function ProjectSection() {
       {/* 2. Autoplay Infinite Carousel Desain */}
       <div className="mb-24">
         <div className="flex justify-between items-center mb-8 pb-3 border-b border-[#30312c]">
-          <h3 className="font-mono text-[11px] font-semibold uppercase tracking-[0.15em] text-[#d7ff68]">
+          <h3 className="font-mono text-[11px] font-semibold uppercase tracking-[0.15em] text-[#ccff00]">
             02 // Visual Design & Branding
           </h3>
           <span className="font-mono text-[10px] text-[#8c8e84] tracking-wider uppercase">
@@ -166,7 +166,7 @@ export default function ProjectSection() {
             {infiniteDesigns.map((design, index) => (
               <div 
                 key={index} 
-                className="w-[300px] md:w-[350px] border border-[#30312c] rounded-md overflow-hidden bg-[#171815] group relative transition-all duration-300 hover:border-[#d7ff68] flex-shrink-0"
+                className="w-[300px] md:w-[350px] border border-[#30312c] rounded-md overflow-hidden bg-[#171815] group relative transition-all duration-300 hover:border-[#ccff00] flex-shrink-0"
               >
                 <div className="relative h-[420px] p-5 flex items-center justify-center overflow-hidden bg-[#20211d]">
                   <img 
@@ -175,7 +175,7 @@ export default function ProjectSection() {
                     className="max-h-full max-w-full object-contain transition-transform duration-500 group-hover:scale-105"
                     onError={(e) => { (e.target as HTMLElement).style.display = 'none'; }}
                   />
-                  <div className="absolute top-4 left-4 bg-[#10110f]/90 text-[#d7ff68] border border-[#30312c] font-mono text-[10px] tracking-wider uppercase px-3 py-1 rounded">
+                  <div className="absolute top-4 left-4 bg-[#10110f]/90 text-[#ccff00] border border-[#30312c] font-mono text-[10px] tracking-wider uppercase px-3 py-1 rounded">
                     {design.category}
                   </div>
                 </div>
@@ -187,15 +187,15 @@ export default function ProjectSection() {
 
       {/* 3. Motion Graphics & Video Projects */}
       <div className="mb-24">
-        <h3 className="font-mono text-[11px] font-semibold uppercase tracking-[0.15em] text-[#d7ff68] mb-8 pb-3 border-b border-[#30312c]">
+        <h3 className="font-mono text-[11px] font-semibold uppercase tracking-[0.15em] text-[#ccff00] mb-8 pb-3 border-b border-[#30312c]">
           03 // Motion Graphics & Video Projects
         </h3>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {videoProjects.map((vid, index) => (
-            <div key={index} className="border border-[#30312c] rounded-md p-8 bg-[#171815] group flex flex-col justify-between transition-all duration-300 hover:border-[#d7ff68]">
+            <div key={index} className="border border-[#30312c] rounded-md p-8 bg-[#171815] group flex flex-col justify-between transition-all duration-300 hover:border-[#ccff00]">
               <div>
                 <div className="mb-5">
-                  <span className="inline-block bg-[#20211d] text-[#d7ff68] border border-[#30312c] text-[10px] font-mono tracking-wider uppercase px-3 py-1 rounded">
+                  <span className="inline-block bg-[#20211d] text-[#ccff00] border border-[#30312c] text-[10px] font-mono tracking-wider uppercase px-3 py-1 rounded">
                     {vid.category}
                   </span>
                 </div>
@@ -225,7 +225,7 @@ export default function ProjectSection() {
                     
                     <button
                       onClick={toggleMute}
-                      className="absolute bottom-4 right-4 bg-[#10110f]/90 hover:bg-[#d7ff68] hover:text-[#10110f] text-[#f1f0e9] text-[10px] font-mono px-3 py-1.5 rounded border border-[#30312c] transition-all flex items-center gap-2"
+                      className="absolute bottom-4 right-4 bg-[#10110f]/90 hover:bg-[#ccff00] hover:text-[#10110f] text-[#f1f0e9] text-[10px] font-mono px-3 py-1.5 rounded border border-[#30312c] transition-all flex items-center gap-2"
                     >
                       {isMuted ? "🔇 SOUND OFF" : "🔊 SOUND ON"}
                     </button>
@@ -241,23 +241,23 @@ export default function ProjectSection() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         
         {/* Dokumen / Arsip */}
-        <div className="border border-[#30312c] rounded-md p-8 bg-[#171815] transition-all duration-300 hover:border-[#d7ff68]">
+        <div className="border border-[#30312c] rounded-md p-8 bg-[#171815] transition-all duration-300 hover:border-[#ccff00]">
           <h3 className="text-[20px] font-bold text-[#f1f0e9] mb-8 flex items-center justify-between">
             <span>Arsip Dokumen & Riset</span>
-            <span className="text-[10px] text-[#d7ff68] font-mono border border-[#30312c] px-2.5 py-1 rounded">PDF / DOCS</span>
+            <span className="text-[10px] text-[#ccff00] font-mono border border-[#30312c] px-2.5 py-1 rounded">PDF / DOCS</span>
           </h3>
           <div className="flex flex-col gap-4">
             {documents.map((doc, index) => (
-              <div key={index} className="p-5 border border-[#30312c] rounded bg-[#20211d]/50 flex flex-col md:flex-row justify-between items-start md:items-center hover:border-[#d7ff68] transition-all">
+              <div key={index} className="p-5 border border-[#30312c] rounded bg-[#20211d]/50 flex flex-col md:flex-row justify-between items-start md:items-center hover:border-[#ccff00] transition-all">
                 <div className="w-full md:w-auto pr-0 md:pr-4">
                   <h4 className="text-[15px] font-semibold text-[#f1f0e9]">{doc.title}</h4>
                   <p className="text-[13px] text-[#8c8e84] mt-1">{doc.desc}</p>
-                  <span className="inline-block mt-2 text-[10px] text-[#d7ff68] font-mono uppercase">{doc.fileSize}</span>
+                  <span className="inline-block mt-2 text-[10px] text-[#ccff00] font-mono uppercase">{doc.fileSize}</span>
                 </div>
                 <a 
                   href={doc.downloadUrl}
                   download
-                  className="mt-4 md:mt-0 font-mono text-[10px] px-4 py-2 bg-[#d7ff68] text-[#10110f] font-bold uppercase tracking-wider rounded hover:bg-[#c2ef4f] transition-colors whitespace-nowrap"
+                  className="mt-4 md:mt-0 font-mono text-[10px] px-4 py-2 bg-[#ccff00] text-[#10110f] font-bold uppercase tracking-wider rounded hover:bg-[#c2ef4f] transition-colors whitespace-nowrap"
                 >
                   Download
                 </a>
@@ -267,11 +267,11 @@ export default function ProjectSection() {
         </div>
 
         {/* Blogspot Card */}
-        <div className="border border-[#30312c] rounded-md p-8 bg-[#171815] flex flex-col justify-between transition-all duration-300 hover:border-[#d7ff68]">
+        <div className="border border-[#30312c] rounded-md p-8 bg-[#171815] flex flex-col justify-between transition-all duration-300 hover:border-[#ccff00]">
           <div>
             <div className="flex justify-between items-center mb-8">
-              <span className="text-[10px] tracking-[0.2em] uppercase text-[#d7ff68] font-mono">PERSONAL NOTES</span>
-              <span className="w-2 h-2 rounded-full bg-[#d7ff68] animate-pulse"></span>
+              <span className="text-[10px] tracking-[0.2em] uppercase text-[#ccff00] font-mono">PERSONAL NOTES</span>
+              <span className="w-2 h-2 rounded-full bg-[#ccff00] animate-pulse"></span>
             </div>
             <h3 className="text-[32px] font-bold tracking-tight text-[#f1f0e9] mb-4 leading-tight">Baca Tulisan & Catatan Gw di Blogspot</h3>
             <p className="text-[14px] text-[#8c8e84] leading-relaxed mb-10 max-w-[420px]">
@@ -283,7 +283,7 @@ export default function ProjectSection() {
             href="https://putraraynaldi.blogspot.com" 
             target="_blank"
             rel="noopener noreferrer"
-            className="w-full py-4 bg-[#d7ff68] text-[#10110f] text-center font-mono text-[11px] font-bold uppercase tracking-[0.15em] rounded hover:bg-[#c2ef4f] transition-colors"
+            className="w-full py-4 bg-[#ccff00] text-[#10110f] text-center font-mono text-[11px] font-bold uppercase tracking-[0.15em] rounded hover:bg-[#c2ef4f] transition-colors"
           >
             Buka Blogspot &rarr;
           </a>

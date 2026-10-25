@@ -40,18 +40,18 @@ export default function HeroSection() {
     <section className="relative max-w-[1180px] mx-auto px-6 pt-20 pb-16 overflow-hidden">
       
       {/* Layer Ambient Gradient Glow Bolak-Balik di Background */}
-      <div className="absolute inset-0 opacity-40 pointer-events-none bg-gradient-to-r from-[#d7ff68]/20 via-transparent to-[#d7ff68]/20 animate-ambient-slow rounded-2xl" />
+      <div className="absolute inset-0 opacity-40 pointer-events-none bg-gradient-to-r from-[#ccff00]/20 via-transparent to-[#ccff00]/20 animate-ambient-slow rounded-2xl" />
       
       {/* Light Orbs */}
-      <div className="absolute -top-10 -left-10 w-72 h-72 bg-[#d7ff68]/15 rounded-full blur-3xl pointer-events-none animate-pulse" />
-      <div className="absolute top-1/2 -right-10 w-80 h-80 bg-[#d7ff68]/10 rounded-full blur-3xl pointer-events-none animate-pulse" />
+      <div className="absolute -top-10 -left-10 w-72 h-72 bg-[#ccff00]/15 rounded-full blur-3xl pointer-events-none animate-pulse" />
+      <div className="absolute top-1/2 -right-10 w-80 h-80 bg-[#ccff00]/10 rounded-full blur-3xl pointer-events-none animate-pulse" />
 
       {/* Content Layer */}
       <div className="relative z-10">
         
         {/* Top Status */}
         <div className="flex items-center gap-3 text-[#a3a59a] font-mono text-[10px] tracking-[0.08em] mb-8">
-          <span className="w-2 h-2 bg-[#d7ff68] rounded-full shadow-[0_0_12px_#d7ff6870] animate-ping" />
+          <span className="w-2 h-2 bg-[#ccff00] rounded-full shadow-[0_0_12px_#ccff0070] animate-ping" />
           <span>MAHASISWA & DIGITAL CREATOR</span>
           <span className="text-[#66685f]">// JAKARTA SELATAN</span>
         </div>
@@ -75,7 +75,7 @@ export default function HeroSection() {
                     word.isOutline ? "text-transparent [-webkit-text-stroke:1px_#a9aa9f]" : ""
                   } ${
                     word.isGradient 
-                      ? "text-transparent bg-clip-text bg-gradient-to-r from-[#d7ff68] via-[#ffffff] to-[#d7ff68] animate-ambient-slow" 
+                      ? "text-transparent bg-clip-text bg-gradient-to-r from-[#ccff00] via-[#ffffff] to-[#ccff00] animate-ambient-slow" 
                       : ""
                   } ${word.isAccent ? "block" : ""}`}
                 >
@@ -91,7 +91,7 @@ export default function HeroSection() {
             <div className="flex items-center gap-6">
               <a 
                 href="#projects" 
-                className="font-mono text-[11px] font-bold bg-[#d7ff68] text-[#10110f] px-6 py-3.5 rounded hover:bg-[#c2ef4f] transition-colors tracking-wider uppercase inline-flex items-center gap-2 shadow-[0_0_20px_rgba(215,255,104,0.2)]"
+                className="font-mono text-[11px] font-bold bg-[#ccff00] text-[#10110f] px-6 py-3.5 rounded hover:bg-[#c2ef4f] transition-colors tracking-wider uppercase inline-flex items-center gap-2 shadow-[0_0_20px_rgba(215,255,104,0.2)]"
               >
                 Explore Works <span>&rarr;</span>
               </a>
@@ -111,7 +111,7 @@ export default function HeroSection() {
                 {/* Badge */}
                 <div className="absolute bottom-4 left-4 right-4 bg-[#10110f]/90 backdrop-blur-md border border-[#30312c] px-4 py-3 rounded flex justify-between items-center font-mono text-[10px]">
                   <span className="text-[#f1f0e9] font-bold">PUTRA RAYNALDI</span>
-                  <span className="text-[#d7ff68]">DEV & CREATOR</span>
+                  <span className="text-[#ccff00]">DEV & CREATOR</span>
                 </div>
               </div>
             </div>

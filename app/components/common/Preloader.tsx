@@ -51,13 +51,13 @@ export default function Preloader({ onComplete }: PreloaderProps) {
             className="relative z-20 flex flex-col items-center text-center px-6"
           >
             {/* Status Kicker */}
-            <span className="font-mono text-[10px] tracking-[0.2em] text-[#d7ff68] uppercase mb-4 flex items-center gap-2">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#d7ff68] animate-ping" />
+            <span className="font-mono text-[10px] tracking-[0.2em] text-[#ccff00] uppercase mb-4 flex items-center gap-2">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#ccff00] animate-ping" />
               PORTFOLIO EXPERIENCE
             </span>
 
             {/* Main Greeting dengan Full Gradient Animation */}
-            <h1 className="text-[32px] sm:text-[48px] font-extrabold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-[#d7ff68] via-[#ffffff] to-[#d7ff68] animate-ambient-slow mb-3">
+            <h1 className="text-[32px] sm:text-[48px] font-extrabold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-[#ccff00] via-[#ffffff] to-[#ccff00] animate-ambient-slow mb-3">
               Hai, Saya Al/Ray.
             </h1>
             
@@ -68,11 +68,11 @@ export default function Preloader({ onComplete }: PreloaderProps) {
             {/* Trigger Button */}
             <button
               onClick={handleOpen}
-              className="group relative font-mono text-[11px] font-bold bg-[#171815] text-[#f1f0e9] border border-[#30312c] px-8 py-4 rounded hover:border-[#d7ff68] hover:text-[#d7ff68] transition-all shadow-2xl flex items-center gap-3 overflow-hidden"
+              className="group relative font-mono text-[11px] font-bold bg-[#171815] text-[#f1f0e9] border border-[#30312c] px-8 py-4 rounded hover:border-[#ccff00] hover:text-[#ccff00] transition-all shadow-2xl flex items-center gap-3 overflow-hidden"
             >
               <span className="relative z-10 tracking-widest uppercase">ENTER GATE</span>
-              <span className="relative z-10 text-[#d7ff68] group-hover:translate-x-1 transition-transform">&rarr;</span>
-              <div className="absolute inset-0 bg-[#d7ff68]/10 translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
+              <span className="relative z-10 text-[#ccff00] group-hover:translate-x-1 transition-transform">&rarr;</span>
+              <div className="absolute inset-0 bg-[#ccff00]/10 translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
             </button>
           </motion.div>
         </motion.div>
