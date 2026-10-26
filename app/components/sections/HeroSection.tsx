@@ -91,30 +91,40 @@ export default function HeroSection() {
             <div className="flex items-center gap-6">
               <a 
                 href="#projects" 
-                className="font-mono text-[11px] font-bold bg-[#ccff00] text-[#10110f] px-6 py-3.5 rounded hover:bg-[#c2ef4f] transition-colors tracking-wider uppercase inline-flex items-center gap-2 shadow-[0_0_20px_rgba(215,255,104,0.2)]"
+                className="font-mono text-[11px] font-bold bg-[#ccff00] text-[#10110f] px-6 py-3.5 rounded hover:bg-[#b3e600] transition-colors tracking-wider uppercase inline-flex items-center gap-2 shadow-[0_0_20px_rgba(204,255,0,0.25)]"
               >
                 Explore Works <span>&rarr;</span>
               </a>
             </div>
           </div>
 
-          {/* Right Column: User Photo */}
+          {/* Right Column: Flying Card Photo Effect */}
           <div className="lg:col-span-5 flex justify-center lg:justify-end">
-            <div className="relative w-full max-w-[380px] border border-[#30312c] rounded-md p-3 bg-[#171815]/90 backdrop-blur-sm shadow-2xl">
-              <div className="relative h-[420px] rounded overflow-hidden bg-[#20211d]">
-                <img 
-                  src="/foto-gue.png" 
-                  alt="Putra Raynaldi" 
-                  className="w-full h-full object-cover"
-                />
-                
-                {/* Badge */}
-                <div className="absolute bottom-4 left-4 right-4 bg-[#10110f]/90 backdrop-blur-md border border-[#30312c] px-4 py-3 rounded flex justify-between items-center font-mono text-[10px]">
-                  <span className="text-[#f1f0e9] font-bold">PUTRA RAYNALDI</span>
-                  <span className="text-[#ccff00]">DEV & CREATOR</span>
+            <motion.div 
+              initial={{ y: 0 }}
+              animate={{ y: [-10, 10, -10] }}
+              transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+              className="relative w-full max-w-[380px] group"
+            >
+              {/* Glow di belakang card */}
+              <div className="absolute inset-0 bg-[#ccff00]/20 rounded-xl blur-2xl group-hover:bg-[#ccff00]/30 transition-all duration-500" />
+
+              <div className="relative border border-[#30312c] rounded-md p-3 bg-[#171815]/90 backdrop-blur-md shadow-2xl group-hover:border-[#ccff00] transition-colors duration-300">
+                <div className="relative h-[420px] rounded overflow-hidden bg-[#20211d]">
+                  <img 
+                    src="/foto-gue.png" 
+                    alt="Putra Raynaldi" 
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                  />
+                  
+                  {/* Badge */}
+                  <div className="absolute bottom-4 left-4 right-4 bg-[#10110f]/90 backdrop-blur-md border border-[#30312c] px-4 py-3 rounded flex justify-between items-center font-mono text-[10px]">
+                    <span className="text-[#f1f0e9] font-bold">PUTRA RAYNALDI</span>
+                    <span className="text-[#ccff00]">DEV & CREATOR</span>
+                  </div>
                 </div>
               </div>
-            </div>
+            </motion.div>
           </div>
 
         </div>
